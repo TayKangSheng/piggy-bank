@@ -57,6 +57,14 @@ For official guide, please visit https://pages.github.com/
 ## Recommended next steps
 1. Style your page and extract `_includes`, `_layouts`, `_sass`, `assets` and `script` into a separate gem.
 
+## Notes
+
+### Mandatory Configurations
+
+#### _config.yml
+- baseurl
+- url
+
 ## References
 - https://pages.github.com/
 - https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#step-3-optional-generate-jekyll-site-files
