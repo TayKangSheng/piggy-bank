@@ -23,8 +23,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # CRITICAL CONFIGURATIONS
-url: "http://www.taykangsheng.com" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/jekyll-github-pages-base" # the subpath of your site, e.g. /blog
+url: "http://taykangsheng.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/piggy-bank" # the subpath of your site, e.g. /blog
 
 # Build settings
 markdown: kramdown
