@@ -11,17 +11,16 @@ Design notes.
 
 - PIGGY-BANK THEME!
     - Pig logo!
-    - Reflections?: Opinion
-    - Coins?: GIST
-    - Bills?: HOW-TO
-    - Colours and typography!
+    - Post types: coins, bills, reflections
+    - Uniform colours and typography!
 - An index page showing all blog posts. (Paginated)
 - Mobile and Web
-    - The generic layout should be the same. The should not be vastly differing design/layout in the 2 different views.
+    - The generic layout should be the same. The 2 views should not be vastly differing design/layout.
 - 3 post types
     1. OPINION, articles on personal opinion
     2. GIST, An entire page of code block. eg. gist
     3. HOW-TO, a step by step guide/explanation to do something.
+
 - Search. Anyway for visitors to be able to look for articles.
     - post tags?
     - search bar? Google search?
