@@ -1,5 +1,71 @@
+// Import partials.
+@import "piggy-bank/debug";
+
+/* global variables */
+$base-font-family: monospace;
+$base-font-unit: 6px;
+$base-font-size: $base-font-unit * 3;
+$page-margin-left: 20%;
+$page-margin-right: 20%;
+
+@mixin padding-top-bottom($padding) {
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
+@mixin header($number) {
+    font-size: $base-font-unit * (7 - $number);
+    font-weight: 600;
+}
+
+@mixin page-margin {
+    margin-left: $page-margin-left;
+    margin-right: $page-margin-right;
+}
+
 body {
+    margin: 0px;
+    padding: 0px;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+
+    /* Background Image configurations */
     background-color: rgb(211, 211, 211);
     background-image: url('piggy-bank-background.svg');
     background-size: 480px auto;
 }
+
+.site-header {
+    // position: fixed;
+    // top: 0px;
+    // left: 0px;
+
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    .nav-bar {
+        @include padding-top-bottom(15px);
+        @include page-margin;
+
+        display: flex;
+        justify-content: space-between;
+
+        .nav-title {
+            @include header(1);
+            align-self: center;
+            text-decoration: none;
+            color: inherit;
+        }
+        .nav-links {
+            @include header(3);
+            align-self: center;
+
+            a {
+                color: inherit;
+                margin: 5px;
+            }
+        }
+    }
+}
+
+

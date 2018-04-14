@@ -1,4 +1,4 @@
-<header class="site-header" role="banner">
+<!-- <header class="site-header" role="banner">
 
   <div class="wrapper">
     {% assign default_paths = site.pages | map: "path" %}
@@ -29,4 +29,16 @@
       </nav>
     {% endif %}
   </div>
-</header>
+</header> -->
+
+<div class="site-header">
+
+  <div class="nav-bar">
+    <a class="nav-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+    <div class="nav-links">
+      <a href="{{ "about/" | relative_url }}">/about</a>
+    </div>
+  </div>
+
+</div>
