@@ -89,11 +89,10 @@ body {
 .site-footer {
     @include page-margin;
     border-top: 1px solid black;
-    margin-bottom: 10px;
+    text-align: right;
+    margin-bottom: 1em;
 
     #signature {
-        float: right;
-
         a {
             text-decoration: none;
             color: inherit;
