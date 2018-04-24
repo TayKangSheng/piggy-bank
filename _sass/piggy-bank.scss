@@ -89,6 +89,7 @@ body {
 .site-footer {
     @include page-margin;
     border-top: 1px solid black;
+    margin-bottom: 10px;
 
     #signature {
         float: right;
