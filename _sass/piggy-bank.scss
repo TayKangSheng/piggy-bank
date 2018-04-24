@@ -70,6 +70,20 @@ body {
 
 .site-content {
     @include page-margin;
+
+    .home {
+        table {
+            tbody {
+                tr {
+                    vertical-align: top;
+
+                    .post-meta {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .site-footer {
