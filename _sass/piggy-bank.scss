@@ -68,4 +68,24 @@ body {
     }
 }
 
+.site-content {
+    @include page-margin;
+}
 
+.site-footer {
+    @include page-margin;
+    border-top: 1px solid black;
+
+    #signature {
+        float: right;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+}
