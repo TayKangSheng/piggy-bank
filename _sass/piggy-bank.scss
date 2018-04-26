@@ -14,7 +14,7 @@ $page-margin-right: 20%;
 }
 
 @mixin header($number) {
-    font-size: $base-font-unit * (7 - $number);
+    font-size: $base-font-unit * (13 - $number);
     font-weight: 600;
 }
 
@@ -57,7 +57,7 @@ body {
             color: inherit;
         }
         .nav-links {
-            @include header(3);
+            @include header(8);
             align-self: center;
 
             a {
