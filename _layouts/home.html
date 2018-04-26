@@ -13,7 +13,11 @@ layout: default
 
               <td class="post-meta">
                 {% assign date_format = site.minima.date_format | default: "%Y-%m-%d" %}
-                {{ post.date | date: date_format }}
+                [{{ post.date | date: date_format }}]
+              </td>
+
+              <td class="post-meta">
+                [{{ post.categories.first | downcase }}]
               </td>
 
               <td class="post-link">

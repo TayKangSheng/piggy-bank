@@ -77,6 +77,8 @@ body {
 
     .home {
         table {
+            border-collapse: collapse;
+
             tbody {
                 tr {
                     vertical-align: top;
@@ -84,6 +86,10 @@ body {
                     .post-meta {
                         white-space: nowrap;
                     }
+                }
+
+                tr:hover {
+                    background-color: white;
                 }
             }
         }
