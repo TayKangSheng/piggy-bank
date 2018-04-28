@@ -8,6 +8,9 @@ $base-font-size: $base-font-unit * 3;
 $page-margin-left: 20%;
 $page-margin-right: 20%;
 
+$screen-size-mobile: 700px;
+$screen-size-tablet: 1200px;
+
 @mixin padding-top-bottom($padding) {
     padding-top: $padding;
     padding-bottom: $padding;
@@ -22,7 +25,7 @@ $page-margin-right: 20%;
     margin-left: $page-margin-left;
     margin-right: $page-margin-right;
 
-    @media (max-width: 1023px) {
+    @media (max-width: $screen-size-tablet) {
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -105,7 +108,7 @@ body {
             }
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: $screen-size-mobile) {
             table, thead, tbody, th, tr, .post-link {
                 display: block;
             }
