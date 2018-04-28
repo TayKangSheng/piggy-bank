@@ -8,4 +8,10 @@
   {% if jekyll.environment == 'production' and site.google_analytics %}
     {% include google-analytics.html %}
   {% endif %}
+
+  <!-- Place this data between the <head> tags of your website -->
+  <title>Page Title. Maximum length 60-70 characters</title>
+  <meta name="description" content="{{ description }}" />
+
+  {% include meta-twitter.html %}
 </head>
