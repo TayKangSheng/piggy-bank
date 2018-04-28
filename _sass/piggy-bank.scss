@@ -83,6 +83,7 @@ body {
     .home {
         table {
             border-collapse: collapse;
+            width: 100%;
 
             tbody {
                 tr {
@@ -90,6 +91,11 @@ body {
 
                     .post-meta {
                         white-space: nowrap;
+                        width: auto;
+                    }
+
+                    .post-link {
+                        width: 100%;
                     }
                 }
 
