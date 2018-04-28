@@ -38,9 +38,9 @@ body {
     font-size: $base-font-size;
 
     /* Background Image configurations */
-    background-color: rgb(211, 211, 211);
+    background-color: rgba(0, 0, 0, 0.1);
     background-image: url('piggy-bank-background.svg');
-    background-size: 480px auto;
+    background-size: ($screen-size-mobile * 2) auto;
 }
 
 .site-header {
