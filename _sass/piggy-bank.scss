@@ -21,6 +21,11 @@ $page-margin-right: 20%;
 @mixin page-margin {
     margin-left: $page-margin-left;
     margin-right: $page-margin-right;
+
+    @media (max-width: 1023px) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 body {
