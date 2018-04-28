@@ -104,6 +104,16 @@ body {
                 }
             }
         }
+
+        @media (max-width: 700px) {
+            table, thead, tbody, th, tr, .post-link {
+                display: block;
+            }
+
+            .post-link:before {
+                content: "→";
+            }
+        }
     }
 }
 
