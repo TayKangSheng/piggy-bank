@@ -2,7 +2,7 @@
 @import "piggy-bank/debug";
 
 /* global variables */
-$base-font-family: monospace;
+$base-font-family: 'Verdana', san-serif;
 $base-font-unit: 6px;
 $base-font-size: $base-font-unit * 3;
 $page-margin-left: 20%;
@@ -37,19 +37,16 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
 
-    /* Background Image configurations */
+    /* Background Image configurations
     background-color: rgba(0, 0, 0, 0.1);
     background-image: url('piggy-bank-background-2.svg');
     background-size: ($screen-size-mobile * 2) auto;
+    */
+    background-color: whitesmoke;
 }
 
 .site-header {
-    // position: fixed;
-    // top: 0px;
-    // left: 0px;
-
     width: 100%;
-    // background-color: rgba(255, 255, 255, 0.5);
 
     .nav-bar {
         @include padding-top-bottom(15px);
@@ -91,6 +88,7 @@ body {
             tbody {
                 tr {
                     vertical-align: top;
+                    font-family: monospace;
 
                     .post-meta {
                         white-space: nowrap;
@@ -105,7 +103,12 @@ body {
                 tr:hover {
                     background-color: white;
                 }
+
+                tr:nth-child(2n) {
+                    background-color: lighten(coral, $amount: 20%);
+                }
             }
+
         }
 
         @media (max-width: $screen-size-mobile) {
