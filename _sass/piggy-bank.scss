@@ -138,6 +138,9 @@ body {
 
         -webkit-overflow-scrolling: touch;
         overflow-x: scroll;
+        @media (max-width: $screen-size-mobile) {
+            font-size: 0.7em;
+        }
     }
 
     img {
