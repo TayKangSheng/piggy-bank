@@ -132,11 +132,18 @@ body {
         -webkit-margin-start: 0;
         -webkit-margin-end: 0;
         box-shadow: 5px 10px #888888;
+
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
     }
 
     img {
         display: block;
         width: 75%;
+
+        @media (max-width: $screen-size-mobile) {
+            width: 100%;
+        }
     }
 }
 
