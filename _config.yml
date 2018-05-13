@@ -24,6 +24,7 @@ github_username:  TayKangSheng
 # CRITICAL CONFIGURATIONS
 url: "http://blog.taykangsheng.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
+imageurl: "/assets/images"
 
 # Build settings
 markdown: kramdown
