@@ -3,6 +3,7 @@
 
 /* global variables */
 $base-font-family: 'Verdana', san-serif;
+$base-fixwidth-font-family: Consolas, Monaco, monospace;
 $base-font-unit: 6px;
 $base-font-size: $base-font-unit * 3;
 $page-margin-left: 20%;
@@ -88,7 +89,7 @@ body {
             tbody {
                 tr {
                     vertical-align: top;
-                    font-family: monospace;
+                    font-family: $base-fixwidth-font-family;
 
                     .post-meta {
                         white-space: nowrap;
