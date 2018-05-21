@@ -1,5 +1,6 @@
 ---
 ---
-
-// @import "minima";
+// One file to import all CSS
+// <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 @import "piggy-bank";
+@import "prism.css"
