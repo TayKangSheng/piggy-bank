@@ -17,9 +17,9 @@ After you have selected the branch and save, github will tell you what is the cu
 
 ## 2. Find out the IP address of GitHub DNS
 
-{% highlight bash %}
+```bash
 $ dig taykangsheng.github.io +nostats +nocomments +nocmd
-{% endhighlight %}
+```
 
 ![github_dns_ip]({{ site.baseurl }}{{ site.imageurl }}/2018-5-5/github_dns_ip.png)
 

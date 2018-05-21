@@ -11,25 +11,25 @@ Before jumping into the difference between the Array and List, we first have to 
 
 ## Data Type and Why is Array a Data Type?
 
-A Data Type, or sometimes refered to as Primitive Data Type are only single values without any special capabilities. Examples of Data Types are "int", "double", "float","char", "boolean" etc. These Data Types usually have a particular declared size in number of bits at the logic level. For example a integer is 32bits long and a double is 64bits long. Declaring a data type when intialising a variable instructs the compiler to set aside a portion of memory large enough to hold the data of that type. 
+A Data Type, or sometimes refered to as Primitive Data Type are only single values without any special capabilities. Examples of Data Types are "int", "double", "float","char", "boolean" etc. These Data Types usually have a particular declared size in number of bits at the logic level. For example a integer is 32bits long and a double is 64bits long. Declaring a data type when intialising a variable instructs the compiler to set aside a portion of memory large enough to hold the data of that type.
 
-{% highlight java %}
-int i; 
+```java
+int i;
 // compiler sets aside 32bits of memory for variable i
-double length; 
+double length;
 // compiler sets aside 64bits of memory for variable length
-{% endhighlight %}
+```
 
 Why then is there a need for data types? Because given the same number of bits of data, the bits can be intepreted vastly differently, for example, a simple 8bit '01000010' can be intepreted as the character 'B', the value 9.2E-44 in double or float, or simply the number 66 as integer.
 
 So then, why is **Array** a Data Type? An **Array** is basically a collection of homogenous items which are arranged contiguously. Therefore all elements in an **Array** must be of the same data type and that it is placed one after another sequentially in memory. Hence in memory, if element 1 is placed in a particular location, element 2 will be placed right after it, and repeatedly for the rest of the elements. An example of an array in Java is as follows:
 
-{% highlight java %}
+```java
 int[] array = new int[10];
 // compiler sets aside (32*10)bits of memory for variable array
-{% endhighlight %}
+```
 
-If you have tried it for yourself, if you declare the array without stating the size of the array, your code will not be allowed to be compiled. Then compare the array data type to the primitive data types mentioned above, the only difference between them is that an array is a collection of the data types ordered squentially in memory. 
+If you have tried it for yourself, if you declare the array without stating the size of the array, your code will not be allowed to be compiled. Then compare the array data type to the primitive data types mentioned above, the only difference between them is that an array is a collection of the data types ordered squentially in memory.
 
 ## List as a Abstract Data Type (ADT) and Data Structure.
 
@@ -41,23 +41,23 @@ A **Abstract Data Type** (ADT) is simple a logical description of what is this d
 
 On the other hand, a **Data Structure** is an implementation of a way data is organised. By data, it can be of the same or different **Data Type** purely decided by how the Data Structure is implemented. In many cases such as in OOP, the details of how the **Data Structure** is implemented is unimportant unless when efficiency is an issue. In this case, a **List**, although logically similar to an **Array** to provide a sequential method for users to acess and manipulate elements might not be as straight forward as setting aside memory space contiguously. In fact, most often than not, a List data structure provides more functions and sometimes a more ingenious way to arrange data to improve access time. An example of a List Data Structure is as below:
 
-{% highlight java %}
+```java
 List<Integer> list = new List<Integer>();
-{% endhighlight %}
+```
 
-So when is a List a ADT and when is it a Data Structure? Simply put, a **List** is a ADT when discussed using words and a **List** is a data structure when it is implemented in code for you to use. Each programming language usually have their own implementation of List such as [Python](https://www.tutorialspoint.com/python/python_lists.htm) and [Java](http://docs.oracle.com/javase/8/docs/api/java/util/List.html). 
+So when is a List a ADT and when is it a Data Structure? Simply put, a **List** is a ADT when discussed using words and a **List** is a data structure when it is implemented in code for you to use. Each programming language usually have their own implementation of List such as [Python](https://www.tutorialspoint.com/python/python_lists.htm) and [Java](http://docs.oracle.com/javase/8/docs/api/java/util/List.html).
 
-## Differences between an Array List? 
+## Differences between an Array List?
 
-Now the question that i was dumbfounded by. The key difference between an Array and List is that an Array is a Data Type and a List is a Data Structure. That being said, an Array must declare its size at right at the start so that the correct amount of memory space can be allocated. But instead the List, more often than not, does not require the user to declare the size at the start. This is why most of the time List is more versatile to deal with than an array. Understand that a List is a data structure and an Array is a Data Type; then you will be able to understand all the differences between List and Array. 
+Now the question that i was dumbfounded by. The key difference between an Array and List is that an Array is a Data Type and a List is a Data Structure. That being said, an Array must declare its size at right at the start so that the correct amount of memory space can be allocated. But instead the List, more often than not, does not require the user to declare the size at the start. This is why most of the time List is more versatile to deal with than an array. Understand that a List is a data structure and an Array is a Data Type; then you will be able to understand all the differences between List and Array.
 
-{% highlight java %}
+```java
 // This is an array
 int[] array = new int[20];
 // These are Lists
 List<Integer> list = new List<Integer>();
 ArrayList<Integer> arrayList = new ArrayList<Integer>();
-{% endhighlight %}
+```
 
 ## Conclusion
 

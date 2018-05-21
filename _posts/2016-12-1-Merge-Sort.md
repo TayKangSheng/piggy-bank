@@ -5,9 +5,9 @@ published: true
 categories: Programming
 ---
 
-Merge sort is a classic example of how the concept Divide and Conquer can improve the run time of your algorithm. Sorting can become a complex problem when you have a huge data set and you dont have all the time in the world to let your machine slowly sort the list. Therefore great minds along the years have come up with many sorting methods such as insertion sort, quick sort, counting sort, radix sort and the list goes on and on. 
+Merge sort is a classic example of how the concept Divide and Conquer can improve the run time of your algorithm. Sorting can become a complex problem when you have a huge data set and you dont have all the time in the world to let your machine slowly sort the list. Therefore great minds along the years have come up with many sorting methods such as insertion sort, quick sort, counting sort, radix sort and the list goes on and on.
 
-In the comparison models for sorting, we have sorting methods such as insertion sort and merge sort where it some point in the algorithm, we always have one main object compared to the others. Comparision sort have a fundamental requirement of O(n log n), and one such algorithm is Merge Sort, which we are going to discuss in this article. 
+In the comparison models for sorting, we have sorting methods such as insertion sort and merge sort where it some point in the algorithm, we always have one main object compared to the others. Comparision sort have a fundamental requirement of O(n log n), and one such algorithm is Merge Sort, which we are going to discuss in this article.
 
 ## Complexity
 
@@ -17,13 +17,13 @@ There are three parts in the Divide and Conquer approach. Note that Divide and C
 2. **Conquer**. In this step, we sort each of the subarrays in itself.
 3. **Merge**. In order to merge the sorted subarrays, we interatively compare the first elements of the subarrays and put them into one array.
 
-So how does Merge Sort runs in O(n log n)? 
+So how does Merge Sort runs in O(n log n)?
 
 #### Divide and Merge steps
 
 In order to divide the array into 2 subarrays, we have to intialise 2 subarrays of size n/2. Then iterate through the entire array and clone the first half into the first subarray and the second half into the second subarray. In this step, every division takes O(n) steps.
 
-{% highlight java %}
+```java
 private T[][] divide(T[] toDivide){
   T[] toSort1 = (T[]) new Comparable[toDivide.length/2];
   T[] toSort2 = (T[]) new Comparable[toDivide.length - toSort1.length];
@@ -33,22 +33,22 @@ private T[][] divide(T[] toDivide){
   for (int i=0 ; i<toSort2.length ; i++){
     toSort2[i] = toDivide[toSort1.length+i];
   }
-	
+
   T[][] divided = (T[][]) new Comparable[2][];
   divided[0] = toSort1;
   divided[1] = toSort2;
   return divided;
 }
-{% endhighlight %}
+```
 
 Merging subarrays also take on similar approach. We have to interate through both of the sorted subarrays. Since the subarrays are already sorted, we can simply compare the first of both subarrays and put them into one single merged array. Therefore every merge also takes O(n) steps.
 
-{% highlight java %}
+```java
 private T[] merge(T[] toMerge1, T[] toMerge2){
   T[] toSort1 = toMerge1;
   T[] toSort2 = toMerge2;
   T[] toMerge = (T[]) new Comparable[toMerge1.length+toMerge2.length];
-	
+
   int[] indexes = {0, 0};
   for (int i=0 ; i<toMerge.length ; i++){
     if ( indexes[0]>toSort1.length-1 ){
@@ -69,9 +69,9 @@ private T[] merge(T[] toMerge1, T[] toMerge2){
   }
   return toMerge;
 }
-{% endhighlight %}
+```
 
-Putting together the steps taken to divide and merge, we can assume that it takes O(cn) steps, where c is a constant > 0. 
+Putting together the steps taken to divide and merge, we can assume that it takes O(cn) steps, where c is a constant > 0.
 
 #### Recursively conquer
 
@@ -81,7 +81,7 @@ We first start from sorting the initial problem. Assuming the time taken for sor
 
 #### Calculating Complexity
 
-The total steps taken to actually sort the array comes from the dividing and merging steps. So whats left is figuring the total steps taken from dividing and merging the arrays at each level. If dividing and merging an array of size n takes cn steps, dividing and merging an array of size n/2 takes cn/2 steps. However 1 array of size n results in 2 array of size n/2, and therefore 2 array of size n/2 takes 2*cn/2 steps which results back to cn steps. If we continuing examining the levels downwards, every level will total up to cn steps. 
+The total steps taken to actually sort the array comes from the dividing and merging steps. So whats left is figuring the total steps taken from dividing and merging the arrays at each level. If dividing and merging an array of size n takes cn steps, dividing and merging an array of size n/2 takes cn/2 steps. However 1 array of size n results in 2 array of size n/2, and therefore 2 array of size n/2 takes 2*cn/2 steps which results back to cn steps. If we continuing examining the levels downwards, every level will total up to cn steps.
 
 ![Recursive conquer]({{ site.baseurl }}/images/2016-12-1-TimeComplexity.png ){: .center-image }
 
@@ -91,7 +91,7 @@ By virtue of dividing the problem into 2 at every level, there will be a total o
 
 After we have implemented the divide and merge methods, the main sorting method is fairly straightforward. We just have to recursively split the array into subarrays and call the sort method on each of them. After that, merge the results and we can return the sorted array.
 
-{% highlight java %}
+```java
 public T[] sort(){
   array = sort(array);
   return array;
@@ -101,15 +101,15 @@ private T[] sort(T[] toSort){
     // base case
     return toSort;
   }
-	
+
   T[][] divide = divide(toSort);
-  divide[0] = sort(divide[0]); 
-  divide[1] = sort(divide[1]);		
+  divide[0] = sort(divide[0]);
+  divide[1] = sort(divide[1]);
   toSort = merge(divide[0], divide[1]);
 
   return toSort;
 }
-{% endhighlight %}
+```
 
 ## Conclusion
 
