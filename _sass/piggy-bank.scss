@@ -131,6 +131,15 @@ body {
             width: 100%;
         }
     }
+
+    pre {
+        code {
+            @media (max-width: $screen-size-mobile) {
+                font-size: 0.5em;
+            }
+        }
+    }
+
 }
 
 .site-footer {
